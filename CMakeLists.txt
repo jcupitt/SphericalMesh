@@ -1,6 +1,11 @@
 # Minimum required CMake version
 cmake_minimum_required(VERSION 2.8.12 FATAL_ERROR)
 
+# MIRTK is now C++14
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 # MIRTK
 find_package(MIRTK REQUIRED)
 include_directories(${MIRTK_INCLUDE_DIRS})
